@@ -10,14 +10,13 @@
     font-family: 'Poppins', sans-serif;
     color: var(--txt);
 
-    /* outline: 1px solid red; */
+
 }
 
 .content {
     width: 100vw;
     height: 100vh;
 }
-
 .content,
 .logo{
     display: flex;
@@ -28,7 +27,7 @@
     background-image: url(./love.jpg);
     background-position: center;
     background-size: auto;
-    background-repeat: no-repeat;
+    background-repeat: space;
     width: 40vw;
 }
 
@@ -43,7 +42,6 @@
     justify-content: center;
     align-items: center;
 }
-
 h1{
     color: white;
 }
@@ -61,6 +59,7 @@ h1{
     
 
 }
+
 .left{
     padding-left: 3vw;
 }
@@ -69,6 +68,8 @@ h1{
     width: 90%;
     font-size: 1.2rem;
 }
+
+
 .remote-text{
     margin: 40px 0 80px;
 }
@@ -87,27 +88,41 @@ h1{
     display: flex;
     flex-flow: column wrap;
     width: 40%;
+    height: 100%;
     font-size: 0.7rem;
     text-transform: uppercase;
-    opacity: 50%;
+    opacity: 100%;
 }
 
+
 .form-title{
-    width: 100%;
-    font-size: 1.2rem;
+    width: 300%;
+    font-size: 1.4rem;
     font-weight: 500;
 }
+
 input{
     background-color: rgb(2, 2, 2);
     border: 1px solid rgb(54, 21, 21);
-    border-radius: 3px;
+    border-radius: 6px;
 }
+
 
 input:focus{
     outline: none;
     border: 2px solid var(--color);
 }
 
+button{
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--color);
+    font-weight: 700;
+    font-size: 1.2em;
+    border: 2px solid var(--color);
+    border-radius: 5px;
+    padding: 10px 40px;
+    margin: 40px 0;
+}
 button{
     background-color: rgba(0, 0, 0, 0);
     color: var(--color);
@@ -129,7 +144,6 @@ button:hover{
     display: flex;
     gap: 5px;
 }
-
 a{
     text-decoration: none;
     color: var(--color);
@@ -138,4 +152,43 @@ a{
 
 a:hover{
     color: white;
+}
+
+.content .imgCredits{
+   text-align: center;
+   display: flex;
+   position: absolute;
+}
+.content.imgCredits p{
+    position: absolute;
+}
+.message{
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+}
+.message >p{
+    padding: 5px 25px ;
+    font-size: 15px;
+}
+
+.valid{
+    color: #4be40f;
+
+}
+
+.valid::before{
+    position: relative;
+    left: -35px;
+    content: "&#10004";
+}
+
+:invalid{
+    color: #e40f0f;
+}
+
+.invalid::before{
+    position: relative;
+    left: -35px;
+    content: "&#10006";
 }
